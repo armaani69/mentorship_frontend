@@ -9,9 +9,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
-        name: displaying a console
-      - run: echo "Ran this successfully"
-          echo "This was consoled"
-          echo "Final console"
-      - name: Checking the version of installed node
-        run: node -v
+      - name: Navigating to the directory containing the .json file and reading it
+        run: cd src/constants
+          cat constants.json
