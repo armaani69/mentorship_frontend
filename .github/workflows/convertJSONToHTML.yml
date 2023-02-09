@@ -10,5 +10,5 @@ jobs:
         with:
           node-version: "18"
       - name: Navigating to the directory containing the .json file and reading it
-        run: cd src/constants/
+        run: cd "src/constants"
           cat constants.json
