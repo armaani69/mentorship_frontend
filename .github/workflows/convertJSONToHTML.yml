@@ -1,16 +1,24 @@
-name: Running Test Workflow
+name: Running Workflow to generate an HTML document from a JSON file
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-node-version:
+  convert-json-to-html:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
+
       - name: Navigating to the directory containing the .json file and reading it
         run: |
-          pwd
           cd src/constants
-          cat constants.json
+          if src/constants/*.json 
+            then 
+              cat constants.json
+          else
+              echo "JSON file not found"
+          fi
+
+      - name: Ending the job
+        run: echo "Job Ended"
