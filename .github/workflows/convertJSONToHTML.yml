@@ -13,7 +13,7 @@ jobs:
       - name: Navigating to the directory containing the .json file and reading it
         run: |
           cd src/constants
-          if src/constants/*.json 
+          if [ -e x.json ]
             then 
               cat constants.json
           else
