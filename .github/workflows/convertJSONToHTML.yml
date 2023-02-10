@@ -23,6 +23,5 @@ jobs:
       - name: Convert that file using JS0N to HTML document converter
         run: |
           npm i json-into-html
-          cd ..
-          cd/scripts
+          cd/src/scripts
           node scripts.js
