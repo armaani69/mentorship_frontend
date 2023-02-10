@@ -20,5 +20,5 @@ jobs:
               echo "JSON file not found"
           fi
 
-      - name: Ending the job
+      - name: Convert that file using JS0N to HTML document converter
         run: echo "Job Ended"
